@@ -4,9 +4,23 @@
     background-color: green;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 .topBar > a {
     color: black;
+    text-decoration: none;
+}
+
+nav {
+    border: 2px dotted black;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 8%;
+    margin: 0;
+    
+    
 }
 
 nav > ul{
@@ -31,6 +45,8 @@ nav > ul > li {
     margin: 0;
     padding: 0;
     height: 100%;
+    padding-right: 1vw;
+    padding-left: 1vw;
 }
 
 .top {
@@ -42,15 +58,7 @@ nav > ul > li {
     display:block;
     height: 10vh;
 }
-nav {
-    border: 2px dotted black;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 8%;
-    margin: 0;
-    
-}
+
 
 
 
