@@ -6,6 +6,9 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    overflow: hidden;
 }
 .topBar > a {
     color: black;
@@ -13,11 +16,11 @@
 }
 
 nav {
-    border: 2px dotted black;
+    /* border: 2px dotted black; */
     top: 0;
     left: 50%;
-    width: 50%;
-    height: 8%;
+    width: 30%;
+    height: 100%;
     margin: 0;
     
     
@@ -27,7 +30,7 @@ nav > ul{
     position: relative;
     right: 0;
     top: 0;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display:flex;
     margin: 0;
     height: 100%;
@@ -38,7 +41,7 @@ nav > ul{
     
 }
 nav > ul > li {
-    border: 2px solid rgb(255, 255, 255);
+    /* border: 2px solid rgb(255, 255, 255); */
     display: flex;
     align-items: center;
     font-size: 3vh;
@@ -63,11 +66,12 @@ nav > ul > li {
 
 
 header {
-    display: inline;
+    display: flex;
     /* border: 2px solid black; */
     top: 0;
     left: 0;
     height: 8%;
+    margin: 0
 }
 
 h1 {
@@ -77,5 +81,10 @@ h1 {
     height: 100%;
     margin: 0;
     margin-left: 1vw;
+    padding: 0;
+    color: white;
+}
+body {
+    margin: 0;
 }
 
