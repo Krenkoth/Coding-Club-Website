@@ -8,15 +8,32 @@ var start = 0;
 
 buttonA.onclick = () => {
     if (start === 0) {
-        start = Date();
-    }
+        start = Date.now();
+    };
     count += 1;
-    let elapsed = (Date() - start) / 1000;
+};
+
+
+var elapsed;
+function checkTime() {
+    if (start === 0) {
+        elapsed = 0;
+    }
+    else {
+        elapsed = (Date.now() - start) / 1000;
+    }
+    
     if (elapsed > 10) {
         start = 0;
-        headingA.textContent = `CPS: ${elapsed}`;
+        headingA.textContent = 
+            `CPM: ${Math.floor(count / elapsed * 6000) / 100}`;
         count = 0;
-    }
-    headingB.textContent = `${Date() - Date()}`;
-    
-};
+    };
+}
+
+setInterval(checkTime, 5)
+function updateTime() {
+    headingB.textContent = Math.floor(elapsed * 100) / 100;
+}
+
+setInterval(updateTime, 10);
