@@ -80,3 +80,44 @@ body {
     margin: 0;
 }
 
+
+
+@media (min-aspect-ratio: 1/1) { /* screen is wide */
+    
+}
+
+@media(max-aspect-ratio: 1/1) { /* screen is skinny */
+    nav > ul > li {
+        display: none;
+    }
+    .icon {
+        background: black;
+        position: absolute;
+        right: 0;
+        top: 0;
+        box-sizing: border-box;
+        height: 6vh;
+        width: 6vh;
+    }
+
+
+    .topBar .icon a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    h1 {
+        font-size: 3vh
+    }
+
+    .topBar {
+        height: 6vh;
+    }
+    .topBar a {
+        color: white;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 30px;
+        display: block;
+      }
+}
