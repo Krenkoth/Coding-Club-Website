@@ -20,11 +20,24 @@ main {
     border-radius: 1vh;
     display: flex;
     flex-direction: column;
-    height: 90vh;
-    overflow: auto;
+    height: 80vh;
 }
 
 
+
+
+.officers {
+    table-layout: fixed;
+    width: max(min(90%, 700px));
+    margin-left: 3%;
+    border-collapse: collapse;
+    color: white;
+    overflow: scroll;
+    display: flex;
+    height: 700px;
+    
+
+}
 
 td > img {
     height: 100px;
@@ -33,36 +46,10 @@ td > img {
     border-radius: 53px;
     border: 2px solid black;
 }
-.officers {
-    table-layout: fixed;
-    width: max(min(90%, 700px), 600px);
-    margin-left: 3%;
-    border-collapse: collapse;
-    color: white;
-    overflow: hidden;
-    border-radius: 20px;
-
-}
-
-tr td:nth-child(1) {
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 1
-}
-
-thead th:nth-child(1) {
-    width: 40%;
-}
-thead th:nth-child(2) {
-    width: 40%;
-}
-
-th {
-    text-align: left;
-}
 
 tbody tr:nth-child(odd) {
     background-color: green;
+    
 }
 tbody tr:nth-child(even) {
     background-color: gray;;
