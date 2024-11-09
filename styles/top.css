@@ -11,7 +11,8 @@
     align-items: center;
     height: 8vh;
     overflow: hidden;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
+    box-shadow: 0px 4px 15px black;
 }
 .topBar > a {
     color: black;
