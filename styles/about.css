@@ -7,6 +7,11 @@ html {
     /* background-image: url("../images/Background.jpg"); */
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .officerBox {
     width: 96%;
     box-sizing: border-box;
@@ -20,11 +25,19 @@ html {
     border-radius: 1vh;
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 800px;
     box-shadow: 3px 3px 10px black;
 }
 
+tbody {
+    border: 2px solid black;
+    border-radius: 30px;
+}
 
+tr {
+    border-radius: 20px;
+    border: 2px solid white;
+}
 
 
 .officers {
@@ -33,10 +46,11 @@ html {
     margin-left: 3%;
     border-collapse: collapse;
     color: white;
-    overflow: scroll;
+    /* overflow: scroll; */
     display: flex;
-    height: 700px;
-    
+    /* height: 700px; */
+    border-radius: 30px;
+    border: 2px solid black
 
 }
 
@@ -54,4 +68,20 @@ tbody tr:nth-child(odd) {
 }
 tbody tr:nth-child(even) {
     background-color: gray;;
+}
+
+tr td:nth-child(1) {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    align-items: center;
+}
+
+tr td:nth-child(2) {
+    padding-right: 20px;
+}
+
+tr td:nth-child(3) {
+    padding-right: 30px;
 }
