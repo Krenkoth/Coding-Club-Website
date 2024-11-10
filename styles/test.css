@@ -3,7 +3,7 @@ html {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-image: url("../images/Background.jpg");
+    /* background-image: url("../images/Background.jpg"); */
 }
 
 main {
@@ -21,6 +21,7 @@ main {
     flex-direction: column;
     height: 90vh;
     overflow: auto;
+    box-shadow: 2px 2px 5px black;
 }
 
 #button_A {
