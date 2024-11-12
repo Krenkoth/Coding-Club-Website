@@ -123,6 +123,10 @@ body {
         width: 6vh;
         /* border: 2px solid white; */
     }
+    .icon > i {
+        height: 100%;
+        width: 100%;
+    }
 
 
     .icon:hover {

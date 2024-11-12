@@ -13,9 +13,8 @@ main {
     align-items: center;
 }
 .officerBox {
-    width: max(50%, 600px);
+    width: 50%;
     box-sizing: border-box;
-    margin: 0 auto;
     background-color: white;
     border: 3px solid black;
     padding: 0px 20px 20px 20px;
@@ -25,15 +24,14 @@ main {
     border-radius: 1vh;
     display: flex;
     flex-direction: column;
-    height: 800px;
     box-shadow: 3px 3px 10px black;
     color: black;
     margin-bottom: 40px;
+    padding-bottom: 40px;
 }
 
 #flexOfficers {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     /* border: 2px solid teal */
     
@@ -52,22 +50,27 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    margin: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
     border-radius: 20px;
     box-shadow: 2px 2px black;
-    padding: 20px;
+    padding: 25px;
     background-color: white;
     color: black;
+    text-align: center;
 }
 
 .officer > img {
-    height: 180px;
-    width: 70%;
+    width: 90%;
     object-fit: cover;
     border-radius: 50px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid black;
 }
 h4, p {
     margin: 3px;
+    padding: 3px;
+    /* border: 2px solid orange; */
 }
 
 .scheduleBox {
@@ -78,4 +81,14 @@ h4, p {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+    text-align: center;
+    box-shadow: 3px 3px 10px black;
+}
+
+@media(max-aspect-ratio: 1.2/1) {
+    .officerBox {
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
