@@ -31,9 +31,7 @@ nav {
 }
 
 nav > ul{
-    position: relative;
-    right: 0;
-    top: 0;
+    /* position: relative;  */
     /* border: 2px solid black; */
     display:flex;
     margin: 0;
@@ -48,7 +46,7 @@ nav > ul > li {
     /* border: 2px solid rgb(255, 255, 255); */
     display: flex;
     align-items: center;
-    font-size: 3vh;
+    font-size: 150%;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -59,6 +57,7 @@ nav > ul > li {
 .top {
     color: rgb(255, 255, 255);
     text-decoration: none;
+    white-space: nowrap;
 }
 
 header {

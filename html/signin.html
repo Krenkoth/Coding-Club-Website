@@ -13,7 +13,7 @@
         <meta property="og:title" content="WHS Coding Club" />
         <meta property="og:description" content="Cool website for the coding club" />
         <link rel="icon" href="../images/images.png" type="image/x-icon" />
-        <title>Projects - WHS Coding Club</title>
+        <title>Sign In - WHS Coding Club</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link 
@@ -22,21 +22,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../styles/top.css" />
         <script src="../scripts/top.js"></script>
-        <script src="../scripts/projects.js"></script>
-        <link rel="stylesheet" href="../styles/projects.css">
-        
     </head>
     <body>
         <div class="topBar">
-            <a href="index.html">
+            <a href="../index.html">
                 <header>
                     <h1>WHS Coding Club</h1>
                 </header>
             </a>
             <nav>
                 <ul class="links">
-                    <li><a href="index.html" class="top">Home</a></li>
-                    <li><a href="html/about.html" class="top">About</a></li>
+                    <li><a href="../index.html" class="top">Home</a></li>
+                    <li><a href="../html/about.html" class="top">About</a></li>
+                    <li><a href="../html/projects.html" class="top">Projects</a></li>
+                    <li><a href="../html/signin.html" class="top">Sign in</a></li>
                 </ul>
                 <a href="javascript:void(0);" class="icon">
                     <i class="fa fa-bars"></i>
@@ -45,12 +44,17 @@
             </nav>
         </div>
         <main>
-            <div id="projects"></div>
-        </main>
-        
+            <div id="SignIn">
+                <label for="field">Sign In</label>
+                <input type="text" id="field" class="field"/>
+                <input type="submit" value="Submit" class="emailSubmit"/>
+            </div>
+            <div id="SignUp">
+                <label>Sign Up</label>
+                <input type="text" id="username" class="field" placeholder="Username"/>
+                <input type="text" id="email" class="field" placeholder="email"/>
+                <input type="submit" value="Submit" class="emailSubmit"/>
+            </div>
+            <!-- Sign in with email -->
+            <!-- Or Sign up with username and email -->
     </body>
-</html>
-            
-            
-
-        

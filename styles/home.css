@@ -41,16 +41,23 @@ h2 {
 }
 
 
-.logos > li {
+.logos > a {
     display: inline-flex;
     justify-content: center;
     margin: 20px;
     height: 18vw;
-    height: min(100%, 170px);
-    width: min(100%, 170px);
-    /* border: 2px solid white; */
+    height: min(100%, 100px);
+    width: min(100%, 100px);
+    border: 2px solid black;
     
 }
+
+.logos > a > img {
+    height: min(100%, 100px);
+    width: min(100%, 100px);
+    border: 2px solid green
+}
+
 .logos {
     display: inline-flex;
     justify-content: center;
