@@ -20,7 +20,7 @@ window.onload = async function() {
 async function retrieveData() {
     const apiurl = "https://nodeclubapi.uw.r.appspot.com/projects/";
     try {
-        const response = await fetch(apiurl);
+        const response = await fetch(apiurl, {mode: "no-cors"});
         if (!response.ok){
             throw new Error(`Response status: ${response.status}`);
         }
@@ -28,7 +28,7 @@ async function retrieveData() {
         console.log(json);
         return json;
     } catch (error) {
-        console.error(error.message)
+        console.error(error.message);
     }
 }
 

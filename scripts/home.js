@@ -1,7 +1,7 @@
 window.onload = function() {
     alert("monkey");
     console.log("monkey");
-    // const emailSubmit = document.querySelector(".emailSubmit");
+    const emailSubmit = document.querySelector(".emailSubmit");
     // emailSubmit.addEventListener("click", monkey);
 }
 

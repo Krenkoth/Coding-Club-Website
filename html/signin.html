@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../styles/top.css" />
         <script src="../scripts/top.js"></script>
+        <script src="../scripts/signin.js"></script>
     </head>
     <body>
         <div class="topBar">
@@ -46,14 +47,14 @@
         <main>
             <div id="SignIn">
                 <label for="field">Sign In</label>
-                <input type="text" id="field" class="field"/>
-                <input type="submit" value="Submit" class="emailSubmit"/>
+                <input type="text" id="SignInEmail" class="field" placeholder="Email"/>
+                <input type="submit" value="Submit" id="SignInSubmit"/>
             </div>
             <div id="SignUp">
                 <label>Sign Up</label>
                 <input type="text" id="username" class="field" placeholder="Username"/>
-                <input type="text" id="email" class="field" placeholder="email"/>
-                <input type="submit" value="Submit" class="emailSubmit"/>
+                <input type="text" id="SignUpEmail" class="field" placeholder="Email"/>
+                <input type="submit" value="Submit" id="SignUpSubmit"/>
             </div>
             <!-- Sign in with email -->
             <!-- Or Sign up with username and email -->
