@@ -1,123 +1,125 @@
-html {
-    
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    /* background-image: url("../images/Background.jpg"); */
+/* home.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4fdf4; /* Soft green background */
+    color: #2f4f2f; /* Dark green for text */
 }
-
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.home {
-    width: 80%;
-    box-sizing: border-box;
-    margin: 0 auto;
-    background-color: white;
-    /* border: 4px solid black; */
-    padding: 0px 20px 20px 20px;
-    /* border: 5px solid black; */
-    margin-left: 3%;
-    margin-right: 3%;
-    border-radius: 1vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
-    box-shadow: 3px 3px 10px black;
-    margin-bottom: 30px;
-}
-
-h2 {
-    padding: 2vh;
-    font-size: 11vh;
-    display: flex;
-    justify-content: center;
-}
-
-
-.logos > a {
-    display: inline-flex;
-    justify-content: center;
-    margin: 20px;
-    height: 18vw;
-    height: min(100%, 100px);
-    width: min(100%, 100px);
-    border: 2px solid black;
-    
-}
-
-.logos > a > img {
-    height: min(100%, 100px);
-    width: min(100%, 100px);
-    border: 2px solid green
-}
-
-.logos {
-    display: inline-flex;
-    justify-content: center;
-    
-    /* border: 2px solid black; */
-}
-
-
-
-#egg {
-    position: absolute;
-    /* border: 4px solid teal;
-    background-color: teal; */
-    /* border: 4px solid teal;
-    background-color: teal; */
-    width: 10px;
-    height: 10px;
-    right: 0;
-    bottom: 0;
-}
-
-#emailInput {
-    display: flex;
-    flex-direction: column;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
     text-align: center;
-    align-items: center;
-    /* border: 2px solid black; */
-    
+}
+
+/* Home section */
+.home h2 {
+    font-size: 2rem;
+    color: #298c41; /* Kelly Green */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Logos container */
+.home .logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.home .logos a img {
+    width: 80px; /* Adjust logo size */
+    height: 80px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.home .logos a img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Slightly brighten logos on hover */
+}
+
+/* Email subscription section */
+#emailInput {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#emailInput label {
+    font-size: 1.2rem;
+    color: #388e3c; /* Slightly darker Kelly Green */
+    font-weight: 600;
 }
 
 #emailSecondLine {
     display: flex;
-    /* border: 2px solid teal; */
-    width: 100%;
     justify-content: center;
+    margin-top: 0.5rem;
 }
 
-label {
-    overflow: hidden;
-    margin-right: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
-
+#emailSecondLine .field {
+    width: 250px;
+    padding: 0.5rem;
+    border: 2px solid #a5d6a7; /* Light green border */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #2f4f2f;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-#field {
-    width: min(80%, 300px);
-    border-radius: 10px;
-    margin-right: 5px;
-    box-shadow: 2px 2px 5px black;
+#emailSecondLine .field:focus {
+    border-color: #298c41; /* Kelly Green focus */
 }
 
-.emailSubmit {
-    border-radius: 10px;
-    padding: 5px 10px;
+#emailSecondLine .emailSubmit {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #298c41; /* Kelly Green button */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#email {
-    color: black;
+#emailSecondLine .emailSubmit:hover {
+    background-color: #1e7033; /* Darker green on hover */
 }
 
+/* Easter egg */
+#easter {
+    display: block;
+    margin-top: 2rem;
+    text-align: center;
+}
 
+#egg {
+    width: 50px;
+    height: 50px;
+    background-color: #298c41; /* Kelly Green */
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
 
+#egg:hover {
+    transform: rotate(360deg); /* Fun spin effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #emailSecondLine {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #emailSecondLine .emailSubmit {
+        margin: 0.5rem 0 0;
+        width: 100%;
+    }
+}
