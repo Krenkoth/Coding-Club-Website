@@ -58,9 +58,9 @@ function addhtml() {
 
   makeNavLink("html/projects.html", "Projects", opener, ul);
 
-  makeNavLink("html/signin.html", "Sign In", opener, ul);
-
   makeNavLink("html/about.html", "About", opener, ul);
+
+  makeNavLink("html/signin.html", "Sign In", opener, ul);
 
   nav.appendChild(ul);
   var bars = document.createElement("a");

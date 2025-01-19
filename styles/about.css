@@ -1,93 +1,119 @@
-
-html {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    /* background-image: url("../images/Background.jpg"); */
+/* about.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4fdf4; /* Soft green background */
+    color: #2f4f2f; /* Dark green for text */
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+    /* background-color: #e6f7e6; Light green container */
+    /* border: 1px solid #a5d6a7; Light green border */
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
 }
+
+/* Header */
+main h2 {
+    font-size: 2rem;
+    color: #298c41; /* Kelly Green */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Officer Box */
 .officerBox {
-    width: 50%;
-    box-sizing: border-box;
-    background-color: white;
-    border: 3px solid black;
-    padding: 0px 20px 20px 20px;
-    /* border: 5px solid black; */
-    margin-left: 2%;
-    margin-right: 2%;
-    border-radius: 1vh;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 3px 3px 10px black;
-    color: black;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    /* background-color: #e6f7e6; White for contrast */
+    /* border: 1px solid #a5d6a7; */
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.officerBox h3 {
+    font-size: 1.5rem;
+    color: #298c41; /* Kelly Green */
+    margin-bottom: 1rem;
 }
 
 #flexOfficers {
-    display: flex;
-    flex-direction: column;
-    /* border: 2px solid teal */
-    
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
-.half {
-    /* border: 2px solid maroon; */
-    display: flex;
-    justify-content: space-evenly;
-}
-
+/* Individual officer */
 .officer {
-    width: 20%;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    box-shadow: 2px 2px black;
-    padding: 25px;
-    background-color: white;
-    color: black;
+    background-color: #ffffff; /* Light green */
+    border: 1px solid #a5d6a7;
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 1 1 calc(50% - 1rem); /* 50% width minus gap for two-column layout */
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.officer > img {
-    width: 90%;
-    object-fit: cover;
-    border-radius: 50px;
-    aspect-ratio: 1 / 1;
-    border: 2px solid black;
-}
-h4, p {
-    margin: 3px;
-    padding: 3px;
-    /* border: 2px solid orange; */
+.officer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.officer img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 2px solid #a5d6a7; /* Light green border around image */
+}
+
+.officer h4 {
+    font-size: 1.2rem;
+    color: #298c41; /* Kelly Green */
+    margin: 0.5rem 0;
+}
+
+.officer p {
+    font-size: 1rem;
+    color: #4f7942; /* Muted green */
+    margin: 0;
+}
+
+/* Schedule Box */
 .scheduleBox {
-    border: 3px solid black;
-    width: 50%;
-    border-radius: 30px;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    text-align: center;
-    box-shadow: 3px 3px 10px black;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e6f7e6;
+    border: 1px solid #a5d6a7;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media(max-aspect-ratio: 1.2/1) {
-    .officerBox {
-        width: 100%;
-        margin-left: 5%;
-        margin-right: 5%;
+.scheduleBox p {
+    font-size: 1.2rem;
+    color: #2f4f2f;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #flexOfficers {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .officer {
+        flex: 1 1 100%; /* Full width for small screens */
     }
 }
+ 

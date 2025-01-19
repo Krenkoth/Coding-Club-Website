@@ -1,9 +1,9 @@
-window.onload = function () {
-    const signinsubmit = document.querySelector("#SignInSubmit");
-    signinsubmit.addEventListener("click", signin);
-    const signupsubmit = document.querySelector("#SignUpSubmit");
-    signupsubmit.addEventListener("click", signup);
-}
+
+const signinsubmit = document.querySelector("#SignInSubmit");
+signinsubmit.addEventListener("click", signin);
+const signupsubmit = document.querySelector("#SignUpSubmit");
+signupsubmit.addEventListener("click", signup);
+
 
 async function signin() {
     const email = String(document.querySelector("#SignInEmail").value);

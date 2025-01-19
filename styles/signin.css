@@ -1,0 +1,89 @@
+/* signin.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4fdf4; /* Soft green background */
+    color: #2f4f2f; /* Dark green for text */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; */
+}
+
+main {
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #e6f7e6; /* Light green container */
+    border: 1px solid #a5d6a7; /* Light green border */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main div {
+    margin-bottom: 1.5rem;
+}
+
+main label {
+    display: block;
+    font-size: 1.2rem;
+    color: #298c41; /* Kelly Green for labels */
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.field {
+    width: 95%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #a5d6a7; /*Light green border */
+    border-radius: 5px;
+    outline: none;
+    color: #2f4f2f;
+    background-color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field:focus {
+    border-color: #298c41; /* Kelly Green focus */
+    box-shadow: 0px 0px 5px rgba(41, 140, 65, 0.5); /* Green glow */
+}
+
+#SignInSubmit, #SignUpSubmit {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #298c41; /* Kelly Green button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#SignInSubmit:hover, #SignUpSubmit:hover {
+    background-color: #1e7033; /* Darker Kelly Green on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+#SignInSubmit:active, #SignUpSubmit:active {
+    transform: translateY(0); /* Remove lift on click */
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    .field {
+        font-size: 0.9rem;
+    }
+
+    #SignInSubmit, #SignUpSubmit {
+        font-size: 0.9rem;
+    }
+}
