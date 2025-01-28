@@ -60,7 +60,12 @@ function addhtml() {
 
   makeNavLink("html/about.html", "About", opener, ul);
 
-  makeNavLink("html/signin.html", "Sign In", opener, ul);
+  if (!sessionStorage.getItem("username")) {
+    makeNavLink("html/signin.html", "Sign In", opener, ul);
+  } else {
+    makeNavLink("html/signin.html", sessionStorage.getItem("username"), opener, ul);
+  }
+  
 
   nav.appendChild(ul);
   var bars = document.createElement("a");
