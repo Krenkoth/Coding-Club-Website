@@ -6,6 +6,8 @@ const signupsubmit = document.querySelector("#SignUpSubmit");
 signupsubmit.addEventListener("click", signup);
 
 
+// get email from sign in field and validate it
+// find account with api, then store info and redirect home
 async function signin() {
     // get email and put it into url
     const email = String(document.querySelector("#SignInEmail").value);
@@ -24,11 +26,11 @@ async function signin() {
                 }
             }
             const json = await response.json();
-            console.log(json[0].username);
-            console.log(json[0].email);
+
+            console.log(json);
             // store user information in sessionStorage, redirect to home page
-            sessionStorage.setItem("username", json[0].username);
-            sessionStorage.setItem("email", json[0].email);
+            sessionStorage.setItem("username", json.username);
+            sessionStorage.setItem("email", json.email);
             window.location.assign("../index.html");
 
             
@@ -41,6 +43,9 @@ async function signin() {
     }
 }
 
+// gets username and email from fields
+// creates user in the database with the api
+// then saves info and redirects to the homepage
 async function signup() {
     const username = String(document.querySelector("#username").value);
     const email = String(document.querySelector("#SignUpEmail").value);
@@ -51,6 +56,9 @@ async function signup() {
         try {
             const response = await fetch(apiurl, {
                 method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
                 body: JSON.stringify({
                     email: email,
                     username: username,
@@ -66,8 +74,11 @@ async function signup() {
                 }
                 
             }
+            // store user information in sessionStorage, redirect to home page
             const json = await response.json();
-            console.log(json);
+            sessionStorage.setItem("username", json.username);
+            sessionStorage.setItem("email", json.email);
+            window.location.assign("../index.html");
 
         } catch (err) {
             console.error(err.message);
