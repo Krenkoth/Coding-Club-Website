@@ -66,7 +66,7 @@ function addhtml() {
   if (!sessionStorage.getItem("username")) {
     makeNavLink("html/signin.html", "Sign In", opener, ul);
   } else {
-    makeNavLink("html/signin.html", sessionStorage.getItem("username"), opener, ul);
+    makeNavLink("html/account.html", sessionStorage.getItem("username"), opener, ul);
   }
   
 
