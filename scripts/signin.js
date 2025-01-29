@@ -1,3 +1,4 @@
+// Javascript for sign in page
 
 const signinsubmit = document.querySelector("#SignInSubmit");
 signinsubmit.addEventListener("click", signin);
@@ -6,6 +7,7 @@ signupsubmit.addEventListener("click", signup);
 
 
 async function signin() {
+    // get email and put it into url
     const email = String(document.querySelector("#SignInEmail").value);
     const apiurl = `https://nodeclubapi.uw.r.appspot.com/user/email?email=${email}`;
 
@@ -13,6 +15,7 @@ async function signin() {
         try {
             const response = await fetch(apiurl);
             console.log(response.status);
+            // check to see if the email exists
             if (!response.ok) {
                 if (response.status === 404) {
                     document.querySelector("#errors").textContent = `Email: ${email} not found`;
@@ -23,7 +26,7 @@ async function signin() {
             const json = await response.json();
             console.log(json[0].username);
             console.log(json[0].email);
-            // sessionStorage.setItem("Monkey", "Howler");
+            // store user information in sessionStorage, redirect to home page
             sessionStorage.setItem("username", json[0].username);
             sessionStorage.setItem("email", json[0].email);
             window.location.assign("../index.html");
@@ -77,6 +80,7 @@ async function signup() {
     
 }
 
+// uses regex to make sure email format is correct
 function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);

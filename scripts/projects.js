@@ -1,4 +1,7 @@
+// Javascript for the projects page. Fetches projects data from api and displays it with DOM
+
 retrieveData().then(data => {
+    // use DOM to make a thing for each project
     const json = document.querySelector("#json");
     const body = document.querySelector("#projects");
     for (let i = 0; i < data.length; i++) {
@@ -20,6 +23,7 @@ retrieveData().then(data => {
 });
 
 
+// Get a json list of projects from the api
 async function retrieveData() {
     const apiurl = "https://nodeclubapi.uw.r.appspot.com/projects/";
     try {

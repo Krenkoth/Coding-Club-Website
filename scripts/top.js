@@ -1,3 +1,5 @@
+// Javascript for the top bar
+
 addhtml();
 window.onload = function () {
 
@@ -9,7 +11,7 @@ window.onload = function () {
 
 
 
-
+// Javascript to make the hamburger work when the page is skinny
 function hamburg() {
     var links = document.querySelector('.links');
     // alert("display: " + links.style.display);
@@ -30,6 +32,7 @@ function hamburg() {
   
 }
 
+// Create the top elements to reduce html redundancy
 function addhtml() {
   var file = document.currentScript.getAttribute("file");
   var opener;

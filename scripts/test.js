@@ -1,3 +1,6 @@
+// Javascript to make the hidden test page work. It is a clicks per second tracker thing.
+
+
 const buttonA = document.querySelector("#button_A");
 const headingA = document.querySelector("#heading_A");
 const headingB = document.querySelector("#heading_B");

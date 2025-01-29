@@ -1,9 +1,12 @@
-window.onload = function() {
-    alert("monkey");
-    console.log("monkey");
-    const emailSubmit = document.querySelector(".emailSubmit");
+// Javascript for home page. It doesn't do anything, but once I add implementation
+// for emailSubmit, it will.
+
+
+// alert("monkey");
+console.log("monkey");
+const emailSubmit = document.querySelector(".emailSubmit");
     // emailSubmit.addEventListener("click", monkey);
-}
+
 
 
 
@@ -23,8 +26,8 @@ window.onload = function() {
 //     return email.includes('@');
 // }
 
-// function monkey() {
-//     alert("monkey");
-//     console.log("monkey");
-// }
+function monkey() {
+    alert("monkey");
+    console.log("monkey");
+}
 
