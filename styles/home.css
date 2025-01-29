@@ -94,6 +94,24 @@ main {
     background-color: #1e7033; /* Darker green on hover */
 }
 
+#signin {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #298c41;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+#signin:hover {
+    background-color: #1e7033;
+}
+
 /* Easter egg */
 #easter {
     display: block;
@@ -104,7 +122,7 @@ main {
 #egg {
     width: 50px;
     height: 50px;
-    background-color: #298c41; /* Kelly Green */
+    /* background-color: #298c41; Kelly Green */
     border-radius: 50%;
     margin: 0 auto;
     transition: transform 0.3s ease;
